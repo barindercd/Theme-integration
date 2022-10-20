@@ -265,5 +265,9 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-  </body>
+  
+<script data-b8-data>
+  window.B8_CUSTOMER_ID = {{ customer.id | json }};
+  window.B8_CUSTOMER_TAGS = {{ customer.tags | json }};
+</script></body>
 </html>
